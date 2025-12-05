@@ -1,0 +1,90 @@
+---
+title: Materials & Options
+description: Overview of printing materials, papers, and customization options available at Dolce Press
+---
+
+## Material Selection
+
+Dolce Press offers a wide variety of premium papers and materials to suit different printing needs and budgets. Choose from our selection of traditional and specialty stocks.
+
+<Columns cols={2}>
+  <Card title="Cotton Papers" icon="leaf" href="#cotton">
+    Soft, luxurious feel with excellent print quality. Ideal for high-end stationery.
+  </Card>
+  <Card title="Linen Papers" icon="texture" href="#linen">
+    Textured surface that adds elegance and sophistication.
+  </Card>
+  <Card title="Recycled Papers" icon="recycle" href="#recycled">
+    Eco-friendly options with various textures and finishes.
+  </Card>
+  <Card title="Specialty Stocks" icon="star" href="#specialty">
+    Metallic, translucent, and colored papers for unique effects.
+  </Card>
+</Columns>
+
+<Tabs>
+  <Tab title="Paper Weights" icon="scale">
+    Choose from 80lb to 110lb text weight, or heavier cardstock options for business cards and invitations.
+  </Tab>
+  <Tab title="Finishes" icon="sparkles">
+    Matte, gloss, soft gloss, and linen finishes available to enhance your printed materials.
+  </Tab>
+  <Tab title="Sizes" icon="expand">
+    Standard and custom sizes available. Common options include 8.5x11, 5x7, and 3.5x2 inches.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">Many of our papers are FSC certified and sourced from sustainable forests.</Callout>
+
+<Expandable title="Printing Method Compatibility" default-open="false">
+  Different printing methods work best with specific paper types. Letterpress suits textured papers, while digital printing offers versatility across all stocks.
+</Expandable>
+
+<Expandable title="Custom Options" default-open="false">
+  We can source specialty papers and create custom sizes for unique projects.
+</Expandable>
+
+<Steps>
+  <Step title="Determine Use" icon="target">
+    Consider how the printed material will be used to select appropriate paper and finish.
+  </Step>
+  <Step title="Choose Weight" icon="weight">
+    Select paper weight based on durability and feel requirements.
+  </Step>
+  <Step title="Select Finish" icon="brush">
+    Choose a finish that complements your design and enhances readability.
+  </Step>
+  <Step title="Confirm Compatibility" icon="check">
+    Ensure your chosen materials work with your selected printing method.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Material Selection,Price Calculator">
+  ```javascript
+// Material options object
+const materials = {
+  cotton: { weight: '100lb', finish: 'soft gloss', price: 0.15 },
+  linen: { weight: '80lb', finish: 'linen', price: 0.12 },
+  recycled: { weight: '90lb', finish: 'matte', price: 0.10 }
+};
+
+// Calculate total cost
+function calculateTotal(quantity, material, printing) {
+  return quantity * (materials[material].price + printing.cost);
+}
+  ```
+  ```python
+# Material compatibility check
+def check_compatibility(material, printing_method):
+    compatibilities = {
+        'cotton': ['digital', 'letterpress'],
+        'linen': ['letterpress', 'foil'],
+        'recycled': ['digital', 'offset']
+    }
+    return printing_method in compatibilities.get(material, [])
+  ```
+</CodeGroup>
+
+<Callout kind="success">Samples of all paper types are available upon request to help you make the best choice for your project.</Callout>
+
+Our material selection allows you to create printed materials that not only look professional but also feel premium. Contact us to discuss your specific requirements and receive material samples.

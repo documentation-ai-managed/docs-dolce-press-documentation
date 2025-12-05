@@ -1,0 +1,94 @@
+---
+title: Ordering Process
+description: Step-by-step guide to ordering custom printing services from Dolce Press
+---
+
+## How to Order
+
+Ordering custom printing services from Dolce Press is straightforward. Our online system guides you through each step, from initial design to final delivery.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Sign up for a free account on our website to access the ordering system.
+  </Step>
+  <Step title="Select Product" icon="shopping-cart">
+    Choose from our catalog of products or select custom design services.
+  </Step>
+  <Step title="Provide Details" icon="file-text">
+    Enter your specifications including quantity, paper type, and printing method.
+  </Step>
+  <Step title="Upload Design" icon="upload">
+    Submit your design files or request our design services.
+  </Step>
+  <Step title="Review Quote" icon="dollar-sign">
+    Receive an instant quote and estimated delivery date.
+  </Step>
+  <Step title="Approve Proof" icon="check-circle">
+    Review and approve digital proofs before production begins.
+  </Step>
+  <Step title="Payment" icon="credit-card">
+    Secure online payment processing with multiple options.
+  </Step>
+  <Step title="Production" icon="cog">
+    Your order enters production with quality control at every stage.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Online Ordering" icon="globe">
+    Use our web-based ordering system for 24/7 access and instant quotes.
+  </Tab>
+  <Tab title="Phone Support" icon="phone">
+    Call our customer service team for personalized assistance.
+  </Tab>
+  <Tab title="Email Consultation" icon="mail">
+    Email us with project details for a custom proposal.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">All orders include free digital proofs and unlimited revisions during the design phase.</Callout>
+
+<Expandable title="Payment Options" default-open="false">
+  We accept credit cards, PayPal, bank transfers, and purchase orders for business accounts.
+</Expandable>
+
+<Expandable title="Shipping Information" default-open="false">
+  Standard shipping is included. Express and international options available at additional cost.
+</Expandable>
+
+<CodeGroup tabs="JavaScript,Python">
+  ```javascript
+// Example: Submit order via API
+const submitOrder = async (orderData) => {
+  const response = await fetch('/api/orders', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(orderData)
+  });
+  return response.json();
+};
+  ```
+  ```python
+import requests
+
+# Python example for order submission
+def submit_order(order_details):
+    url = 'https://api.dolcepress.com/orders'
+    headers = {'Authorization': 'Bearer YOUR_TOKEN'}
+    response = requests.post(url, json=order_details, headers=headers)
+    return response.json()
+  ```
+</CodeGroup>
+
+<Columns cols={2}>
+  <Card title="File Requirements" icon="file" href="#file-specs">
+    Upload high-resolution files in PDF, AI, or PSD format.
+  </Card>
+  <Card title="Proof Approval" icon="eye" href="#proofs">
+    Digital proofs ensure accuracy before printing begins.
+  </Card>
+</Columns>
+
+<Callout kind="tip">Save time by preparing your design files according to our specifications before starting your order.</Callout>
+
+Our team is available to help at every step of the process. Contact support if you have questions about your order status or need assistance with file preparation.

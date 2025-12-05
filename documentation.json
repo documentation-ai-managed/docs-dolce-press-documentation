@@ -1,0 +1,93 @@
+{
+  "name": "Dolce Press Documentation",
+  "initialRoute": "introduction",
+  "colors": {
+    "light": {
+      "brand": "#9c9c9d"
+    },
+    "dark": {
+      "brand": "#d1d1d1"
+    }
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "icon": "book",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "icon": "rocket",
+            "pages": [
+              {
+                "title": "Introduction",
+                "path": "introduction",
+                "icon": "star"
+              }
+            ]
+          },
+          {
+            "group": "Services",
+            "icon": "settings",
+            "pages": [
+              {
+                "title": "Services",
+                "path": "services",
+                "icon": "tool"
+              }
+            ]
+          },
+          {
+            "group": "Ordering",
+            "icon": "shopping-cart",
+            "pages": [
+              {
+                "title": "Ordering Process",
+                "path": "ordering-process",
+                "icon": "clipboard"
+              }
+            ]
+          },
+          {
+            "group": "Design & Production",
+            "icon": "edit",
+            "pages": [
+              {
+                "title": "Design Guidelines",
+                "path": "design-guidelines",
+                "icon": "file-text"
+              },
+              {
+                "title": "Materials & Options",
+                "path": "materials-options",
+                "icon": "package"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "icon": "terminal",
+            "openapi": "openapi.yaml"
+          }
+        ]
+      },
+      {
+        "tab": "Changelog",
+        "icon": "clock",
+        "pages": [
+          {
+            "title": "Release History",
+            "path": "changelog",
+            "icon": "history"
+          }
+        ]
+      }
+    ]
+  }
+}

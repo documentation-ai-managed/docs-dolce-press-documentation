@@ -1,0 +1,95 @@
+---
+title: Design Guidelines
+description: Best practices and specifications for preparing designs for printing at Dolce Press
+---
+
+## Design Preparation
+
+Creating effective designs for printing requires attention to resolution, color modes, and file formats. Follow these guidelines to ensure your printed materials look professional and accurate.
+
+<Callout kind="alert">Always work with high-resolution files to avoid pixelation and poor print quality.</Callout>
+
+<Tabs>
+  <Tab title="File Formats" icon="file-text">
+    Preferred formats: PDF, AI, PSD. Minimum 300 DPI resolution for all images.
+  </Tab>
+  <Tab title="Color Modes" icon="palette">
+    Use CMYK color mode for printing. RGB is suitable only for digital proofs.
+  </Tab>
+  <Tab title="Bleed & Safe Zones" icon="crop">
+    Include 1/8 inch bleed and keep important elements 1/4 inch from trim edge.
+  </Tab>
+</Tabs>
+
+<Steps>
+  <Step title="Plan Layout" icon="layout">
+    Sketch your design and consider how it will look when printed.
+  </Step>
+  <Step title="Choose Fonts" icon="type">
+    Use standard fonts or embed custom fonts in your PDF files.
+  </Step>
+  <Step title="Prepare Images" icon="image">
+    Ensure all images are high-resolution and in the correct color mode.
+  </Step>
+  <Step title="Add Bleed" icon="scissors">
+    Extend backgrounds and images beyond the final trim size.
+  </Step>
+  <Step title="Convert to PDF" icon="file">
+    Export as PDF with embedded fonts and images.
+  </Step>
+  <Step title="Proof Check" icon="check-circle">
+    Review your design for errors before uploading.
+  </Step>
+</Steps>
+
+<Expandable title="Common Design Mistakes" default-open="false">
+  <Expandable title="Low Resolution Images" default-open="false">
+    Images below 300 DPI will appear blurry when printed at actual size.
+  </Expandable>
+  <Expandable title="Missing Bleed" default-open="false">
+    Designs without bleed may have white edges after trimming.
+  </Expandable>
+  <Expandable title="RGB Colors" default-open="false">
+    RGB colors may shift when converted to CMYK for printing.
+  </Expandable>
+</Expandable>
+
+<CodeGroup tabs="Design Checklist,Color Conversion">
+  ```javascript
+// Design validation function
+const validateDesign = (file) => {
+  const checks = {
+    resolution: file.dpi >= 300,
+    colorMode: file.colorMode === 'CMYK',
+    hasBleed: file.bleed >= 0.125,
+    embeddedFonts: file.fontsEmbedded
+  };
+  return checks;
+};
+  ```
+  ```python
+from PIL import Image
+
+# Convert RGB to CMYK
+def rgb_to_cmyk(image_path):
+    img = Image.open(image_path).convert('CMYK')
+    img.save(image_path.replace('.jpg', '_cmyk.jpg'))
+    return 'Converted to CMYK'
+  ```
+</CodeGroup>
+
+<Columns cols={3}>
+  <Card title="Typography" icon="type" href="#fonts">
+    Choose readable fonts and maintain hierarchy with size and weight.
+  </Card>
+  <Card title="Color Theory" icon="palette" href="#colors">
+    Use contrasting colors for readability and brand consistency.
+  </Card>
+  <Card title="Layout Balance" icon="grid" href="#layout">
+    Create visual balance with proper spacing and alignment.
+  </Card>
+</Columns>
+
+<Callout kind="tip">Our design team can help optimize your files if they don't meet our specifications.</Callout>
+
+Following these guidelines ensures your printed materials will match your digital designs. Contact our support team if you need assistance with file preparation or design optimization.

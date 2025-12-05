@@ -1,0 +1,94 @@
+---
+title: Services
+description: Comprehensive overview of Dolce Press printing and design services
+---
+
+## Our Printing Services
+
+Dolce Press offers a wide range of printing services using traditional and modern techniques. Our expert craftsmen combine years of experience with state-of-the-art equipment to deliver premium results.
+
+<Columns cols={2}>
+  <Card title="Letterpress Printing" icon="type" href="#letterpress">
+    Classic raised ink printing for elegant, textured designs.
+  </Card>
+  <Card title="Foil Stamping" icon="star" href="#foil">
+    Metallic foil applications for luxurious, eye-catching effects.
+  </Card>
+  <Card title="Digital Printing" icon="monitor" href="#digital">
+    High-resolution digital printing for vibrant colors and quick production.
+  </Card>
+  <Card title="Custom Design" icon="palette" href="#design">
+    Full-service design from concept to final artwork.
+  </Card>
+</Columns>
+
+<Callout kind="success">We use eco-friendly inks and recycled papers whenever possible to minimize our environmental impact.</Callout>
+
+<Tabs>
+  <Tab title="Business Materials" icon="briefcase">
+    Business cards, letterheads, envelopes, and presentation folders. Perfect for professional branding and networking.
+  </Tab>
+  <Tab title="Invitations" icon="calendar" href="#invitations">
+    Wedding invitations, save-the-dates, birth announcements, and event stationery. Custom designs for special occasions.
+  </Tab>
+  <Tab title="Marketing Collateral" icon="megaphone">
+    Brochures, flyers, posters, and promotional materials. Eye-catching designs to boost your marketing efforts.
+  </Tab>
+</Tabs>
+
+<Expandable title="Material Options" default-open="false">
+  Our paper selection includes cotton, linen, recycled, and specialty stocks in various weights and finishes.
+</Expandable>
+
+<Expandable title="Finishing Options" default-open="false">
+  Choose from scoring, perforating, embossing, and custom cutting to enhance your printed materials.
+</Expandable>
+
+<Steps>
+  <Step title="Choose Service" icon="check-circle">
+    Select the printing service that best fits your project needs.
+  </Step>
+  <Step title="Select Materials" icon="package">
+    Pick from our range of premium papers and specialty options.
+  </Step>
+  <Step title="Customize Design" icon="edit">
+    Work with our designers or upload your own artwork files.
+  </Step>
+  <Step title="Review Proof" icon="eye">
+    Approve digital proofs before we begin printing.
+  </Step>
+  <Step title="Production" icon="cog">
+    We print and finish your order with quality control at every step.
+  </Step>
+  <Step title="Shipping" icon="truck">
+    Fast, secure shipping with tracking and insurance options.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="Letterpress,Digital,Foil">
+  ```javascript
+// Example: Calculate printing costs
+const calculateCost = (quantity, method) => {
+  const basePrice = method === 'letterpress' ? 150 : 75;
+  const perUnit = quantity > 500 ? 0.25 : 0.35;
+  return basePrice + (quantity * perUnit);
+};
+  ```
+  ```python
+import requests
+
+# API call to get pricing
+def get_pricing(service_type, quantity):
+    response = requests.get(f'/api/pricing/{service_type}?qty={quantity}')
+    return response.json()
+  ```
+  ```bash
+# Command line tool for order status
+curl -X GET "https://api.dolcepress.com/orders/12345/status" \
+  -H "Authorization: Bearer YOUR_API_KEY"
+  ```
+</CodeGroup>
+
+<Callout kind="alert">Minimum order quantities apply for certain specialty printing methods.</Callout>
+
+Contact us today to discuss your project requirements and receive a custom quote for your printing needs.
